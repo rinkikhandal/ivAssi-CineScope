@@ -1,0 +1,192 @@
+/* Container Styles */
+.container {
+   max-width: 100%;
+   color: #fff;
+   padding: 2rem 4rem;
+}
+
+/* Hero Section */
+.hero {
+   display: flex;
+   margin-bottom: 3rem;
+   background: #131415;
+   border-radius: 5px;
+   padding: 10px;
+   gap: 2rem;
+}
+
+.heroImage {
+   flex: 1;
+   max-width: 350px;
+}
+
+.poster {
+   width: 100%;
+   border-radius: 12px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.movieDetails {
+   flex: 2;
+}
+
+.title {
+   font-size: 3rem;
+   font-weight: bold;
+   margin-bottom: 1rem;
+}
+
+.meta {
+   margin-bottom: 1.5rem;
+   font-size: 1.1rem;
+}
+
+.meta p {
+   margin: 0.5rem 0;
+}
+
+.rating {
+   font-size: 1.2rem;
+   font-weight: 600;
+   color: #ffbb33;
+}
+
+.ratings {
+   margin: 1rem 0;
+   display: flex;
+   gap: 2rem;
+   font-size: 1.1rem;
+}
+
+.imdbScore,
+.rottenScore {
+   color: #ddd;
+}
+
+.plot {
+   margin: 1rem 0;
+   font-size: 1.1rem;
+}
+
+.buttons {
+   display: flex;
+   gap: 1rem;
+}
+
+.watchButton,
+.addToWatchlist {
+   padding: 1rem 2rem;
+   background-color: #3b82f6;
+   color: #fff;
+   border: none;
+   font-size: 1.2rem;
+   cursor: pointer;
+   border-radius: 5px;
+}
+
+.watchButton:hover,
+.addToWatchlist:hover {
+   background-color: #1d72b8;
+}
+
+/* Additional Information */
+.info {
+   background-color: #222;
+   padding: 2rem;
+   border-radius: 10px;
+   margin-bottom: 3rem;
+}
+
+.info h2 {
+   font-size: 2rem;
+   margin-bottom: 1rem;
+}
+
+.info p {
+   font-size: 1.2rem;
+   margin: 0.5rem 0;
+}
+
+.info strong {
+   color: #3b82f6;
+}
+
+/* Similar Movies Section */
+.similarMovies {
+   margin-top: 3rem;
+}
+
+.movieCarousel {
+   display: flex;
+   gap: 1.5rem;
+   overflow-x: auto;
+   padding-bottom: 2rem;
+}
+
+.movieCard {
+   text-align: center;
+   width: 200px;
+   cursor: pointer;
+   transition: transform 0.3s ease-in-out;
+}
+
+.movieCard img {
+   width: 100%;
+   border-radius: 8px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.movieCard:hover {
+   transform: scale(1.05);
+}
+
+.movieCard p {
+   margin-top: 0.5rem;
+   font-size: 1rem;
+   color: #ddd;
+}
+
+/* Loader */
+.loader {
+   color: #fff;
+   font-size: 2rem;
+   text-align: center;
+   margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+   .hero {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .heroImage {
+      max-width: 250px;
+   }
+
+   .movieDetails {
+      text-align: center;
+   }
+
+   .title {
+      font-size: 2rem;
+   }
+
+   .meta {
+      font-size: 1rem;
+   }
+
+   .buttons {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .movieCard {
+      width: 150px;
+   }
+
+   .movieCard img {
+      width: 100%;
+   }
+}
