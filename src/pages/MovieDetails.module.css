@@ -1,39 +1,47 @@
 /* Container Styles */
 .container {
    max-width: 100%;
+   /* background-color: #f5c518; */
    color: #fff;
-   padding: 2rem 4rem;
+   padding: 2rem 0rem;
 }
 
 /* Hero Section */
 .hero {
+   width: 94%;
    display: flex;
+   margin: auto;
    margin-bottom: 3rem;
-   background: #131415;
+   padding: 1rem 1rem;
+   background: #06223e19;
    border-radius: 5px;
-   padding: 10px;
    gap: 2rem;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+   flex-direction: row; /* Default layout */
 }
 
 .heroImage {
    flex: 1;
-   max-width: 350px;
-}
-
-.poster {
    width: 100%;
-   border-radius: 12px;
-   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+   max-width: 300px;
+   border-radius: 5px;
+   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+   object-fit: cover;
 }
 
-.movieDetails {
-   flex: 2;
+.overlay {
+   flex: 1;
+}
+
+.detailsContainer {
+   color: #ddd;
 }
 
 .title {
    font-size: 3rem;
    font-weight: bold;
    margin-bottom: 1rem;
+   color: #188af5; /* IMDb yellow */
 }
 
 .meta {
@@ -45,108 +53,40 @@
    margin: 0.5rem 0;
 }
 
-.rating {
-   font-size: 1.2rem;
-   font-weight: 600;
-   color: #ffbb33;
-}
-
-.ratings {
-   margin: 1rem 0;
-   display: flex;
-   gap: 2rem;
-   font-size: 1.1rem;
-}
-
-.imdbScore,
-.rottenScore {
-   color: #ddd;
-}
-
 .plot {
    margin: 1rem 0;
    font-size: 1.1rem;
 }
 
-.buttons {
-   display: flex;
-   gap: 1rem;
-}
-
-.watchButton,
-.addToWatchlist {
-   padding: 1rem 2rem;
-   background-color: #3b82f6;
-   color: #fff;
-   border: none;
-   font-size: 1.2rem;
-   cursor: pointer;
-   border-radius: 5px;
-}
-
-.watchButton:hover,
-.addToWatchlist:hover {
-   background-color: #1d72b8;
-}
-
-/* Additional Information */
-.info {
-   background-color: #222;
-   padding: 2rem;
-   border-radius: 10px;
-   margin-bottom: 3rem;
-}
-
-.info h2 {
-   font-size: 2rem;
-   margin-bottom: 1rem;
-}
-
-.info p {
-   font-size: 1.2rem;
-   margin: 0.5rem 0;
-}
-
-.info strong {
-   color: #3b82f6;
-}
-
 /* Similar Movies Section */
 .similarMovies {
+   width: 94%;
+   display: flex;
+   margin: auto;
    margin-top: 3rem;
 }
 
-.movieCarousel {
+.similarMoviesContainer {
+   max-width: 100%;
+   margin: 0 auto;
+}
+
+.similarTitle {
+   font-size: 2rem;
+   color: #fff;
+   font-weight: bold;
+   margin-bottom: 1rem;
+}
+
+.similarMovieCards {
    display: flex;
-   gap: 1.5rem;
+   gap: 1rem;
    overflow-x: auto;
-   padding-bottom: 2rem;
+   padding: 1.5rem;
+   flex-wrap: wrap;
+   justify-content: space-around;
 }
 
-.movieCard {
-   text-align: center;
-   width: 200px;
-   cursor: pointer;
-   transition: transform 0.3s ease-in-out;
-}
-
-.movieCard img {
-   width: 100%;
-   border-radius: 8px;
-   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-.movieCard:hover {
-   transform: scale(1.05);
-}
-
-.movieCard p {
-   margin-top: 0.5rem;
-   font-size: 1rem;
-   color: #ddd;
-}
-
-/* Loader */
 .loader {
    color: #fff;
    font-size: 2rem;
@@ -155,38 +95,64 @@
 }
 
 /* Responsive Design */
+
+/* Mobile Portrait (Up to 768px) */
 @media (max-width: 768px) {
+   /* Hero section fixes for mobile */
    .hero {
-      flex-direction: column;
-      align-items: center;
+      flex-direction: column; /* Stack movie poster and details vertically */
+      gap: 1rem;
+      align-items: center; /* Center the content */
    }
 
    .heroImage {
-      max-width: 250px;
+      max-width: 250px; /* Adjust poster width */
+      margin-bottom: 1rem; /* Space between poster and details */
    }
 
-   .movieDetails {
-      text-align: center;
+   .overlay {
+      text-align: center; /* Center align text for smaller screens */
    }
 
    .title {
-      font-size: 2rem;
+      font-size: 2rem; /* Adjust font size */
    }
 
    .meta {
       font-size: 1rem;
    }
 
-   .buttons {
-      flex-direction: column;
+   .plot {
+      font-size: 1rem;
+   }
+}
+
+/* Tablets and Landscape (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+   .hero {
+      flex-direction: row;
       align-items: center;
    }
 
-   .movieCard {
-      width: 150px;
+   .heroImage {
+      max-width: 300px;
    }
 
-   .movieCard img {
-      width: 100%;
+   .title {
+      font-size: 2.5rem;
+   }
+}
+
+@media (max-width: 480px) {
+   .title {
+      font-size: 1.8rem;
+   }
+
+   .meta {
+      font-size: 0.9rem;
+   }
+
+   .plot {
+      font-size: 1rem;
    }
 }

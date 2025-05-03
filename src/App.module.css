@@ -1,6 +1,8 @@
 /* App.module.css */
 body {
    font-family: "Ubuntu", sans-serif;
+   margin: 0;
+   padding: 0;
 }
 
 h1,
@@ -17,6 +19,7 @@ h3 {
    color: #e5e5e5;
 }
 
+/* Navbar */
 .navbar {
    display: flex;
    justify-content: space-between;
@@ -43,10 +46,11 @@ h3 {
    transform: scale(1.05);
 }
 
-/* In App.module.css */
+/* Navigation Links */
 .links {
    display: flex;
    gap: 1.5rem;
+   flex-wrap: wrap;
 }
 
 .links a {
@@ -55,12 +59,12 @@ h3 {
    font-weight: 500;
    position: relative;
    transition: color 0.3s ease;
+   color: #ccc;
 }
 
-/* Active Link Style */
 .links a.active {
-   color: #3b82f6; /* Active color */
-   font-weight: bold; /* Optional: make it bold */
+   color: #3b82f6;
+   font-weight: bold;
 }
 
 .links a::after {
@@ -78,18 +82,14 @@ h3 {
    color: #3b82f6;
 }
 
-.links a:hover::after {
+.links a:hover::after,
+.links a.active::after {
    width: 100%;
 }
 
-/* For active links, add the underline or highlight effect */
-.links a.active::after {
-   width: 100%; /* Active underline */
-}
-
+/* Main Content */
 .main {
    flex: 1;
-   padding: 2rem 1rem;
    max-width: 1280px;
    width: 100%;
    height: 100vh;
@@ -101,4 +101,47 @@ h3 {
    );
 }
 
-/* In your App.module.css */
+/* ========== RESPONSIVE STYLES ========== */
+
+/* Tablets and small desktops */
+@media (max-width: 1024px) {
+   .logo {
+      font-size: 1.5rem;
+   }
+
+   .main {
+      padding: 1.5rem 1rem;
+   }
+}
+
+/* Mobile (portrait) */
+@media (max-width: 768px) {
+   .logo {
+      font-size: 1.4rem;
+   }
+
+   .navbar {
+      align-items: flex-start;
+   }
+
+   .main {
+      padding: 1rem 0.5rem;
+   }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+   .logo {
+      font-size: 1.3rem;
+   }
+
+   .main {
+      padding: 0.5rem;
+   }
+   .links {
+      padding-top: 6px;
+   }
+   .links a {
+      font-size: 0.95rem;
+   }
+}

@@ -71,19 +71,12 @@ const MovieDetails = () => {
 
          {/* Similar Movies Section */}
          {similar.length > 0 && (
-            <section className="w-full ">
-               <div className="max-w-6xl mx-auto">
-                  <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-white">
-                     Similar Movies
-                  </h2>
-                  <div className="flex overflow-x-auto gap-4 scrollbar-hide sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4">
+            <section className={styles.similarMovies}>
+               <div className={styles.similarMoviesContainer}>
+                  <h2 className={styles.similarTitle}>Similar Movies</h2>
+                  <div className={styles.similarMovieCards}>
                      {similar.map((movie) => (
-                        <div
-                           key={movie.imdbID}
-                           className="flex-shrink-0 w-64 sm:w-auto"
-                        >
-                           <MovieCard movie={movie} />
-                        </div>
+                        <MovieCard key={movie.imdbID} movie={movie} />
                      ))}
                   </div>
                </div>

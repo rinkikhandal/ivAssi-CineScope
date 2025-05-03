@@ -34,7 +34,7 @@ const Home = () => {
          <div className="absolute inset-0  pointer-events-none z-0" />
 
          <div className="max-w-6xl mx-auto relative z-10">
-            <h1 className="text-5xl sm:text-6xl font-extrabold text-center mb-12 tracking-tight text-blue-500 drop-shadow-md transition-all duration-300 hover:scale-105">
+            <h1 className="text-2xl md:text-4xl xl:text-6xl font-extrabold text-center mb-12 tracking-tight text-blue-500 drop-shadow-md transition-all duration-300 hover:scale-105">
                🎬 Movie Search
             </h1>
 
